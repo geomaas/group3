@@ -1,4 +1,3 @@
-
 $('#mainAttack').on('click', function() {
     knight.attackMain(samurai);
 });
@@ -7,6 +6,17 @@ $('#lightAttack').on('click', function() {
 })
 $('#dodge').on('click', function() {
     knight.dodge(shogun)
+})
+
+////////player 2 buttons
+$('#enmainAttack').on('click', function() {
+    shogun.attackMain(knight);
+});
+$('#enlightAttack').on('click', function() {
+    shogun.attackSecondary(knight)
+})
+$('#endodge').on('click', function() {
+    shogun.dodge(knight)
 })
 
 ///////// splash screen click event
@@ -27,19 +37,19 @@ $('.insertCoin').on('click', function(event) {
         randomEnemy = samurai;
     }
     $('.action-box h1').html("Random Fighters Chosen!");
-//// populating hero stats box
+    //// populating hero stats box
     $('#Name').append(`${randomCombatant.Name}`)
     $('#Health').append(`${randomCombatant.Health}`)
     $('#Attack').append(`${randomCombatant.Damage}`)
     $('#Evade').append(`${randomCombatant.Evasion}`)
     $('#Accuracy').append(`${randomCombatant.Accuracy}`)
-//// populating enemy stats box
+        //// populating enemy stats box
     $('#enName').append(`${randomEnemy.Name}`)
     $('#enHealth').append(`${randomEnemy.Health}`)
     $('#enAttack').append(`${randomEnemy.Damage}`)
     $('#enEvade').append(`${randomEnemy.Evasion}`)
     $('#enAccuracy').append(`${randomEnemy.Accuracy}`)
-///////removing splash screen
+        ///////removing splash screen
     $('.insertCoin').addClass('hidden');
     $('.introScreen').addClass('hidden');
     $('.main-container').removeClass('hidden');

@@ -14,6 +14,7 @@ class Combatant {
         var dodge = (enemy.Evasion + (Math.floor(Math.random() * 10)))
         var attackpower = (this.Damage - Math.floor(Math.random() * 10))
         var enemyHealth = enemy.Health -= attackpower;
+        var heroHealth = this.Health -= attackpower;
         console.log(swing, dodge)
         console.log(enemyHealth);
         if (swing >= dodge) {
@@ -23,6 +24,7 @@ class Combatant {
             console.log(enemy.Health);
             console.log("Attack power", attackpower, "remaingin health: ", enemyHealth);
             $('#enHealth').html("Health: " + enemyHealth)
+            $('#Health').html("Health: " + heroHealth)
         } else if (swing <= dodge) {
             $('.action-box h1').html("You Miss!");
         }
@@ -36,12 +38,13 @@ class Combatant {
     attackSecondary(enemy) {
         var attackpower = Math.floor((this.Damage - Math.random() * 10) / 2);
         var enemyHealth = enemy.Health -= attackpower;
+        var heroHealth = this.Health -= attackpower;
         $('.action-box h1').html("Light hit!  " + "Attack Power: " + attackpower);
         console.log(attackpower);
         $('#enHealth').html("Health: " + enemyHealth)
         if (enemyHealth <= 0) {
             console.log("you ded");
-            // $('.ninja')addClass('hidden');
+            $('#Health').html("Health: " + heroHealth)
             $('.action-box h1').html("Player 2 is dead!");
             $('.ninja').slideUp(), 4000;
 
