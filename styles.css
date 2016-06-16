@@ -153,13 +153,13 @@ button:hover {
     right: 79%;
 }
 #enemystats {
-    position: relative;
+    float: right;
     left: 4%;
     background-color: red;
     width: 22%;
     display: inline-block;
 }
-<<<<<<< HEAD #enemystats li {
+#enemystats li {
     border: 1px solid #000;
     list-style-type: none;
     width: 100%;
@@ -180,7 +180,7 @@ button:hover {
 #enemystats img {
     position: relative;
     right: 79%;
-    >>>>>>> 41662454b8d83959fbcd48e6538a3a88f8023059
+    
 }
 #enemystats li {
     border: 1px solid #000;
