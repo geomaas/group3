@@ -128,13 +128,13 @@ header {
     width: 67%;
     margin-left: 15%;
     margin-top: 16px;
-    height: 200px;
+    <<<<<<< HEAD>>>>>>> c43393fd0be4ac2e84e24f92605afe6fc33a0a68=======height: 200px;
 }
-button{
+button {
     margin-left: 3%;
 }
-button:hover{
-    background-color:#b1aaaa
+button:hover {
+    background-color: #b1aaaa>>>>>>> 41662454b8d83959fbcd48e6538a3a88f8023059
 }
 #stats {
     background-color: red;
@@ -152,17 +152,35 @@ button:hover{
     position: relative;
     right: 79%;
 }
-
 #enemystats {
-position: relative;
-left: 4%;
+    float: right;
+    left: 4%;
     background-color: red;
     width: 22%;
     display: inline-block;
 }
-#enemystats img{
-  position: relative;
-  right: 79%;
+#enemystats li {
+    border: 1px solid #000;
+    list-style-type: none;
+    width: 100%;
+    background-color: gold;
+}
+.action-box {
+    text-align: center;
+    display: block;
+    background-color: white;
+}
+.hero-buttons {
+
+}
+.enemy-buttons {
+    display: inline-block;
+    float: right;
+}
+#enemystats img {
+    position: relative;
+    right: 79%;
+    
 }
 #enemystats li {
     border: 1px solid #000;

@@ -8,40 +8,64 @@ class Combatant {
         this.Attack = opts.Attack || 0;
         this.mod = opts.mod || 2;
     }
-    attackMain(enemy) {
-        var swing = (this.Accuracy + (Math.floor(Math.random() * 10)))
-        var dodge = (enemy.Evasion + (Math.floor(Math.random() * 10)))
 
+    attackMain(enemy) {
+        var swing = (this.Accuracy + 2 + (Math.floor(Math.random() * 10)))
+        var dodge = (enemy.Evasion + (Math.floor(Math.random() * 10)))
+        var attackpower = (this.Damage - Math.floor(Math.random() * 10))
+        var enemyHealth = enemy.Health -= attackpower;
         console.log(swing, dodge)
+        console.log(enemyHealth);
         if (swing >= dodge) {
-          enemy.Health -= this.Damage - Math.floor(Math.random() * this.Damage );
-            // console.log(this.Health -= enemy.Damage)
-        } else {
-            console.log("FUUUUUUUUUUUUUUUUUUUUUUUCK")
+            console.log("hit!");
+            $('.action-box h1').html("You Hit! " + "Attack Power: " + attackpower);
+            // enemy.Health -= attackpower;
+            console.log(enemy.Health);
+            console.log("Attack power", attackpower, "remaingin health: ", enemyHealth);
+            $('#enHealth').html("Health: " + enemyHealth)
+        } else if (swing <= dodge) {
+            $('.action-box h1').html("You Miss!");
         }
-        // else if (`${enemy.Health}`<=0){ console.log(`${enemy.Name} is dead!!!!`)};
-        // else if(`${this.Health}`<=0){console.log(`${this.Name} is dead!!!`)}
+        if (enemyHealth <= 0) {
+            console.log("you ded");
+            $('.action-box h1').html("Player 2 is dead!");
+            $('.ninja').slideUp(), 4000;
+        }
+
     }
     attackSecondary(enemy) {
-        console.log(enemy.Health -= Math.floor(this.Damage * Math.random()))
-        if (enemy.Health <= 0) {
-            console.log("UUCK")
+        var attackpower = Math.floor((this.Damage - Math.random() * 10) / 2);
+        var enemyHealth = enemy.Health -= attackpower;
+        $('.action-box h1').html("Light hit!  " + "Attack Power: " + attackpower);
+        console.log(attackpower);
+        $('#enHealth').html("Health: " + enemyHealth)
+        if (enemyHealth <= 0) {
+            console.log("you ded");
+            // $('.ninja')addClass('hidden');
+            $('.action-box h1').html("Player 2 is dead!");
+            $('.ninja').slideUp(), 4000;
+
         }
     }
+
     dodge(enemy) {
         var swing = (this.Accuracy + (Math.floor(Math.random() * 10)))
-        var block = (enemy.Evasion + (Math.floor(Math.random() * 10)))
+        var block = (enemy.Evasion + 2 + (Math.floor(Math.random() * 10)))
+        var attackpower = Math.floor((this.Damage - Math.random() * 10) / 4);
+        var enemyHealth = enemy.Health -= attackpower;
 
         console.log(swing, block)
         if (swing >= block) {
-            console.log(enemy.Health -= this.Damage - Math.floor(Math.random() * this.Damage));
-            // console.log(this.Health -= enemy.Damage)
+            enemyHealth
+            console.log(attackpower, this.Damage);
+            console.log(enemyHealth, "")
+            $('.action-box h1').html("Dodge Fail! " + "Scratch! " + "Attack Power: ", attackpower);
+            $('#enHealth').html("Health: " + enemyHealth)
         } else {
-            console.log("Miss", enemy.Health);
+            $('.action-box h1').html("Dodge!");
         }
     }
 }
-
 
 class Europe extends Combatant {
     constructor(opts) {
