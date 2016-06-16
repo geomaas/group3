@@ -129,7 +129,7 @@ header {
     /*height: 500px;*/
     margin-left: 15%;
     margin-top: 16px;
-    height: 200px;
+    
     >>>>>>> c43393fd0be4ac2e84e24f92605afe6fc33a0a68
 }
 #stats {
@@ -155,6 +155,18 @@ header {
   list-style-type: none;
   width: 100%;
   background-color: gold;
+}
+.action-box {
+  text-align: center;
+  display: block;
+  background-color: white;
+}
+.hero-buttons {
+
+}
+.enemy-buttons {
+  display: inline-block;
+  float: right;
 }
 =======text-align: center;
 border:1px solid #000;

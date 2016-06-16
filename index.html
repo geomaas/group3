@@ -15,29 +15,29 @@
     </header>
     <div class="main-container hidden">
         <div class="knightsvsninjas">
-            <div id="hitMessage" style="color:white">HIT MESSAGE</div>
+            <!-- <div id="hitMessage" style="color:white">HIT MESSAGE</div> -->
             <img class="knight" src="images/stationedknight.gif" alt="" />
             <img class="ninja" src="images/ninja.gif" alt="" />
         </div>
     </div>
 
     <div class="introScreen">
-        <div class="insertCoin">Insert Coin</div>
+        <div class="insertCoin">Insert Coin <br>Click Here to Start!!!</div>
     </div>
     <div class="buttonContainer">
         <div id="statsContainer">
             <ul id="stats">
-                <img class="knight" src="images/stationedknight.gif" alt="" />
+                <!-- <img class="knight" src="images/stationedknight.gif" alt="" /> -->
 
                 <li id="Name">Name: </li>
                 <li id="Health">Health: </li>
                 <li id="Attack">Max Attack: </li>
                 <li id="Evade">Max Evade: </li>
+                <li id="Accuracy">Max Accuracy: </li>
 
             </ul>
-            <button id="mainAttack" type="button">Heavy Attack</button>
-            <button id="lightAttack" type="button">Light Attack</button>
-            <button id="dodge" type="button">dodge</button>
+
+
             <ul id="enemystats">
                 <!-- <img class="knight" src="images/stationedknight.gif" alt="" /> -->
 
@@ -45,9 +45,22 @@
                 <li id="enHealth">Health: </li>
                 <li id="enAttack">Max Attack: </li>
                 <li id="enEvade">Max Evade: </li>
+                <li id="enAccuracy">Max Accuracy: </li>
 
             </ul>
-
+            <div class="hero-buttons">
+              <button id="mainAttack" type="button">Heavy Attack</button>
+              <button id="lightAttack" type="button">Light Attack</button>
+              <button id="dodge" type="button">dodge</button>
+            </div>
+            <div class="enemy-buttons">
+              <button id="mainAttack" type="button">Heavy Attack</button>
+              <button id="lightAttack" type="button">Light Attack</button>
+              <button id="dodge" type="button">dodge</button>
+            </div>
+            <div class="action-box">
+              <h1></h1>
+            </div>
         </div>
     </div>
 
