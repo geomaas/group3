@@ -3,7 +3,7 @@ header {
     background-color: gray;
 }
 .main-container {
-    <<<<<<< HEAD width: 100%;
+    width: 100%;
     height: 500px;
     border: 1px solid black;
 }
@@ -11,7 +11,7 @@ header {
     border: 1px solid black;
 }
 .main-container .knightsvsninjas {
-    =======box-shadow: 10px 10px 5px #888888;
+    box-shadow: 10px 10px 5px #888888;
     border: 2px solid black;
     width: 67%;
     height: 500px;
@@ -26,7 +26,7 @@ header {
     border: 1px solid black;
 }
 .main-container .knightsvsninjas {
-    >>>>>>> c43393fd0be4ac2e84e24f92605afe6fc33a0a68 background-image: url("images/dojo.png");
+    background-image: url("images/dojo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 87%;
@@ -34,7 +34,7 @@ header {
     display: inline-block;
     width: 100%;
     height: 100%;
-    <<<<<<< HEAD background-color: black;
+    background-color: black;
 }
 .main-container .knightsvsninjas #hitMessage {
     position: relative;
@@ -61,7 +61,7 @@ header {
     text-align: center;
     background-color: yellow;
     width: 100%;
-    =======background-color: black;
+    background-color: black;
 }
 .main-container .knights {
     width: 49%;
@@ -126,62 +126,65 @@ header {
     background-color: grey;
     box-shadow: 10px 10px 5px #888888;
     width: 67%;
-    /*height: 500px;*/
     margin-left: 15%;
     margin-top: 16px;
-    
-    >>>>>>> c43393fd0be4ac2e84e24f92605afe6fc33a0a68
+    <<<<<<< HEAD>>>>>>> c43393fd0be4ac2e84e24f92605afe6fc33a0a68=======height: 200px;
+}
+button {
+    margin-left: 3%;
+}
+button:hover {
+    background-color: #b1aaaa>>>>>>> 41662454b8d83959fbcd48e6538a3a88f8023059
 }
 #stats {
     background-color: red;
-    width: 20%;
+    width: 22%;
     display: inline-block;
 }
 #stats li {
-    <<<<<<< HEAD text-align: center;
+    text-align: left;
     border: 1px solid #000;
     list-style-type: none;
     width: 100%;
     background-color: gold;
 }
+#stats img {
+    position: relative;
+    right: 79%;
+}
 #enemystats {
-    float: right;
+    position: relative;
+    left: 4%;
     background-color: red;
-    width: 20%;
+    width: 22%;
     display: inline-block;
 }
-#enemystats li {
-  border: 1px solid #000;
-  list-style-type: none;
-  width: 100%;
-  background-color: gold;
+<<<<<<< HEAD #enemystats li {
+    border: 1px solid #000;
+    list-style-type: none;
+    width: 100%;
+    background-color: gold;
 }
 .action-box {
-  text-align: center;
-  display: block;
-  background-color: white;
+    text-align: center;
+    display: block;
+    background-color: white;
 }
 .hero-buttons {
 
 }
 .enemy-buttons {
-  display: inline-block;
-  float: right;
+    display: inline-block;
+    float: right;
 }
-=======text-align: center;
-border:1px solid #000;
-list-style-type: none;
-color: white;
-margin-top: 17%;
-width:100%;
-background-color: gold;
-
+#enemystats img {
+    position: relative;
+    right: 79%;
+    >>>>>>> 41662454b8d83959fbcd48e6538a3a88f8023059
 }
-@-webkit-keyframes {}
-border: 1px solid #000;
-list-style-type: none;
-width: 100%;
-background-color: gold;
-
+#enemystats li {
+    border: 1px solid #000;
+    list-style-type: none;
+    width: 100%;
+    background-color: gold;
 }
->>>>>>> c43393fd0be4ac2e84e24f92605afe6fc33a0a68
